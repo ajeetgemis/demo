@@ -22,7 +22,7 @@ orderid=random.randint(100000,10000000)
 # Create your views here.
 class orders_status(View):
     def get(self,request):
-        ip=request.META.get('BASE_DIR')
+        ip=request.META.get('REMOTE_DIR')
         print(ip)
         return render(request,'orders.html')
 class checkoutcart(View):
